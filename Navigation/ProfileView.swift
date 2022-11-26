@@ -9,44 +9,27 @@ import UIKit
 
 class ProfileView: UIView {
     
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    @IBOutlet weak var imageView: UIImageView! = {
-        var image = UIImageView()
-         let picture = UIImage(named: "image")
-         image.image = picture
-         
-         return image
-    }()
+    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var labelOne: UILabel! = {
-       var labelOne = UILabel()
-        labelOne.text = "Всеволод"
-        labelOne.backgroundColor = .systemOrange
-        
-        return labelOne
-    }()
+    @IBOutlet weak var labelOne: UILabel!
     
-    @IBOutlet weak var labelTwo: UILabel! = {
-       var labelTwo = UILabel()
-        labelTwo.text = "17.09.1976"
-        labelTwo.backgroundColor = .systemGreen
-        
-        return labelTwo
-    }()
-    
-    @IBOutlet weak var labelThree: UILabel! = {
-       var labelThree = UILabel()
-        labelThree.text = "Псков"
-        labelThree.backgroundColor = .systemPurple
-        return labelThree
-    }()
+    @IBOutlet weak var labelTwo: UILabel!
+
+    @IBOutlet weak var labelThree: UILabel!
     
     @IBOutlet weak var textView: UITextView!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let image = UIImage(named: "image")
+        imageView.image = image
+        labelOne.text = "Всеволод"
+        labelOne.text = "Всеволод"
+        labelOne.backgroundColor = .systemOrange
+        labelTwo.text = "17.09.1976"
+        labelTwo.backgroundColor = .systemGreen
+        labelThree.text = "Псков"
+        labelThree.backgroundColor = .systemPurple
+    }
     
 }
